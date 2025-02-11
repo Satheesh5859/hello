@@ -23,6 +23,14 @@ jobs:
     steps:
     - name: checkout the code
       uses: actions/checkout@v4
+
+    - name: cache dependencies
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '8'
+        cache: 'maven'
+        
     
     - name: Build with Maven
       run: mvn -B package --file pom.xml
