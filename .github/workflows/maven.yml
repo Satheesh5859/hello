@@ -24,7 +24,7 @@ jobs:
     - name: checkout the code
       uses: actions/checkout@v4
 
-    - name: cache dependencies
+    - name: cache dependenciess
       uses: actions/setup-java@v2
       with:
         distribution: 'temurin'
